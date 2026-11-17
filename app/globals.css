@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { background: #fff; color: #0B2A6F; font-family: "IBM Plex Sans Arabic", system-ui, Tahoma, sans-serif; -webkit-font-smoothing: antialiased; }
+:focus-visible { outline: 2px solid #1D5BFF; outline-offset: 2px; border-radius: 6px; }
+::selection { background: #D5E1FB; }
+
+/* خطوط الدفتر: خلفية الـ hero (ترمز لدفتر الحسابات) */
+.ledger-lines {
+  background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 39px, #E3ECFD 39px, #E3ECFD 40px);
+  -webkit-mask-image: linear-gradient(to bottom, #000 40%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 40%, transparent 100%);
+}
+.num { font-variant-numeric: tabular-nums; direction: ltr; unicode-bidi: isolate; display: inline-block; }
+@media (prefers-reduced-motion: reduce) { * { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
